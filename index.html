@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/chooseCharacter.css">
+    <title>Choose player</title>
+</head>
+
+<body>
+    <div id="chooseCharacter">
+        <div id="choiceZone">
+            <div id="characterChoiceCenter">
+                <button onclick="chooseCharacter(this,'hunter')" class="perso selected"></button>
+                <button onclick="chooseCharacter(this,'archer')" class="perso"></button>
+                <button onclick="chooseCharacter(this,'magician')" class="perso"></button>
+            </div>
+            <div id="characterDescription">
+                <h3 id="characterName">Chasseur</h3>
+                <div>
+                    <p id="description">Le meilleur chasseur de tous les temps</p>
+                </div>
+            </div>
+        </div>
+        <button onclick="play()" id="playButton">jouer</button>
+    </div>
+    <script src="js/chooseCharacter.js"></script>
+</body>
+
+</html>
