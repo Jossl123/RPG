@@ -13,6 +13,19 @@ function drawRoom(room, player) {
             }
         }
     }
+    drawMiniMap(player)
+    drawPlayer(player)
+}
+
+function drawMiniMap(player) {
+    return
+}
+
+function drawPlayer(player) {
+    var element = document.getElementById("player");
+    if (element) {
+        element.parentNode.removeChild(element);
+    }
     document.getElementById(`cell_${player.posOnRoom[1]}_${player.posOnRoom[0]}`).innerHTML = `
     <div class="player" id="player"></div>`
 }

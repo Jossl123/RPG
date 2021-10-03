@@ -8,7 +8,7 @@ body,
 }
 
 #chooseCharacter {
-    background: linear-gradient(#365733, #FFFD62);
+    background: linear-gradient(#FFFD62, #365733);
     display: flex;
     justify-content: center;
 }

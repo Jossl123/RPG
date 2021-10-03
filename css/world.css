@@ -1,27 +1,30 @@
 .wall {
-    background-color: black;
+    background-color: rgb(126, 50, 0);
 }
 
 .emptyCell {
-    background-color: brown;
+    background-color: rgb(47, 191, 43);
+}
+
+.emptyCell:hover {
+    background-color: aquamarine;
 }
 
 .cell {
     display: flex;
-    width: 10%;
-    padding-bottom: 10%;
+    width: 100px;
+    height: 100px;
 }
 
 .roomRow {
     display: flex;
-    height: 10%;
+    height: 100px;
     box-sizing: border-box;
 }
 
 .player {
-    border: 10%;
     width: 80%;
-    padding-bottom: 80%;
+    height: 80%;
     background-color: aqua;
     border-radius: 50%;
 }
