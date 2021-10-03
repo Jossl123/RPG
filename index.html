@@ -1,32 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+<head id="head">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/chooseCharacter.css">
-    <title>Choose player</title>
+    <link rel="stylesheet" href="css/game.css">
+    <link rel="stylesheet" href="css/world.css">
+    <title>RPG - Choose player</title>
 </head>
 
-<body>
+<body id="body">
     <div id="chooseCharacter">
         <div id="choiceZone">
             <div id="characterChoiceCenter">
-                <button onclick="chooseCharacter(this,'hunter')" class="perso selected"></button>
-                <button onclick="chooseCharacter(this,'archer')" class="perso"></button>
+                <button onclick="chooseCharacter(this,'archer')" class="perso selected"></button>
+                <button onclick="chooseCharacter(this,'hunter')" class="perso"></button>
                 <button onclick="chooseCharacter(this,'magician')" class="perso"></button>
+                <button onclick="chooseCharacter(this,'warior')" class="perso"></button>
             </div>
             <div id="characterDescription">
-                <h3 id="characterName">Chasseur</h3>
+                <h3 id="characterName">Archer</h3>
                 <div>
-                    <p id="description">Le meilleur chasseur de tous les temps</p>
+                    <p id="description">Le meilleur archer de toute la forêt</p>
                 </div>
             </div>
         </div>
         <button onclick="play()" id="playButton">jouer</button>
     </div>
-    <script src="js/chooseCharacter.js"></script>
+    <div id="game">
+        <div id="playerStats"></div>
+        <div id="gameViewZone"></div>
+    </div>
+    <script src="js/chooseCharacter.js" id="chooseCharacterScript"></script>
+    <script src="js/initGame.js"></script>
+    <script src="js/classes.js"></script>
+    <script src="js/worlds.js"></script>
+    <script src="js/draw.js"></script>
 </body>
 
 </html>

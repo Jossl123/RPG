@@ -1,0 +1,16 @@
+#game {
+    height: 100%;
+    display: none;
+}
+
+#playerStats {
+    flex: 17%;
+    background-color: #2D2C27;
+}
+
+#gameViewZone {
+    display: flex;
+    flex-direction: column;
+    flex: 83%;
+    background-color: rgb(199, 199, 199);
+}

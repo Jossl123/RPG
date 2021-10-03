@@ -1,24 +1,30 @@
 var characterProperties = {
-    'hunter': {
-        'color1': '#2D1C02',
-        'color2': '#FDDCA7',
-        'name': 'Chasseur',
-        'description': "Le meilleur chasseur de tous les temps"
-    },
     'archer': {
-        'color1': '#365733',
-        'color2': '#FFFD62',
+        'color1': '#FFFD62',
+        'color2': '#365733',
         'name': 'Archer',
         'description': "Le meilleur archer de toute la forêt"
     },
+    'hunter': {
+        'color1': '#FDDCA7',
+        'color2': '#2D1C02',
+        'name': 'Chasseur',
+        'description': "Le meilleur chasseur de tous les temps"
+    },
     'magician': {
-        'color1': '#000C3F',
-        'color2': '#4B77E5',
+        'color1': '#4B77E5',
+        'color2': '#000C3F',
         'name': 'Magicien',
         'description': "Il controlle l'art de la prestidigitation"
+    },
+    'warior': {
+        'color1': '#C33408',
+        'color2': '#2F0F00',
+        'name': 'Guerrier',
+        'description': "Un guerrier surpuissant"
     }
 }
-var classChoose = "hunter"
+var classChoose = "archer"
 
 function chooseCharacter(e, name) {
     if (characterProperties[name] == undefined) return
@@ -30,8 +36,4 @@ function chooseCharacter(e, name) {
     document.getElementById("chooseCharacter").style.background = `linear-gradient(${characterProperties[name].color1}, ${characterProperties[name].color2})`
     document.getElementById("characterName").innerHTML = characterProperties[name].name
     document.getElementById("description").innerHTML = characterProperties[name].description
-}
-
-function play() {
-    alert(classChoose)
 }
