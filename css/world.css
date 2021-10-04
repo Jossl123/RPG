@@ -28,3 +28,61 @@
     background-color: aqua;
     border-radius: 50%;
 }
+
+.losange {
+    width: 0;
+    height: 0;
+    border: 20px solid transparent;
+    border-bottom: 10px solid green;
+    position: relative;
+    top: -25px;
+}
+
+.losange:after {
+    width: 0;
+    height: 0;
+    content: '';
+    position: absolute;
+    left: -20px;
+    top: 10px;
+    border: 20px solid transparent;
+    border-top: 10px solid green;
+}
+
+.losange-up {
+    width: 25%;
+    padding: 1em;
+    content: '';
+    padding-bottom: 10%;
+    background: orange;
+    clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+    transform: rotate(180deg);
+}
+
+.losangeIso {
+    width: 25%;
+    padding: 1em;
+    content: '';
+    padding-bottom: 10%;
+    background: orange;
+    clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+    transform: rotate(180deg);
+}
+
+.losangeIso:after {
+    width: 25%;
+    padding: 1em;
+    content: '';
+    padding-bottom: 10%;
+    background: orange;
+    clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+}
+
+.losange-down {
+    width: 25%;
+    padding: 1em;
+    content: '';
+    padding-bottom: 10%;
+    background: orange;
+    clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+}
