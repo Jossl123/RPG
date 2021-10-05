@@ -1,9 +1,4 @@
-var r = [
-    [1, 1, 1, 1],
-    [1, 1, 1, 1],
-    [0, 1, 1, 0],
-    [1, 1, 1, 1]
-]
+var r = new Array(10).fill(1).map(() => new Array(10).fill(1));
 
 var firstWorld = new World("firstWorld", [
     [r, r, 0, r],

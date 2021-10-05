@@ -8,9 +8,11 @@
     background-color: #2D2C27;
 }
 
-#gameViewZone {
+#gameZone {
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
+    position: relative;
     flex: 83%;
-    background-color: rgb(199, 199, 199);
 }

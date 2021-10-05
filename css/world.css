@@ -6,62 +6,36 @@
     background-color: rgb(47, 191, 43);
 }
 
-.emptyCell:hover {
+.emptyCellC:hover {
     background-color: aquamarine;
 }
 
-.cell {
-    display: flex;
-    width: 100px;
-    height: 100px;
+#gameIsoView {
+    transform: rotateX(60deg) rotateZ(45deg);
+}
+
+#gameIsoClickable {
+    position: absolute;
+    transform: rotateX(60deg) rotateZ(45deg);
+    z-index: 20;
 }
 
 .roomRow {
     display: flex;
-    height: 100px;
+    height: 50px;
     box-sizing: border-box;
+}
+
+.cell {
+    display: flex;
+    width: 50px;
+    height: 50px;
 }
 
 .player {
-    width: 80%;
-    height: 80%;
-    background-color: aqua;
-    border-radius: 50%;
-}
-
-
-/*.losange {
-    width: 0;
-    height: 0;
-    border: 50px solid transparent;
-    border-bottom: 25px solid;
-    border-bottom-color: red;
+    transform: translate(-50%, -50%);
     position: absolute;
+    height: 85px;
 }
 
-.losange:after {
-    content: '';
-    position: absolute;
-    top: 25px;
-    left: -50px;
-    width: 0;
-    height: 0;
-    border: 50px solid transparent;
-    border-top: 25px solid red;
-}*/
-
-#gameViewZoneIso {
-    width: 100%;
-}
-
-.losange {
-    height: 10%;
-    width: 10%;
-    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-}
-
-.triRow {
-    display: flex;
-    height: 100px;
-    box-sizing: border-box;
-}
+#player {}
