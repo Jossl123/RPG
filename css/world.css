@@ -29,60 +29,39 @@
     border-radius: 50%;
 }
 
-.losange {
+
+/*.losange {
     width: 0;
     height: 0;
-    border: 20px solid transparent;
-    border-bottom: 10px solid green;
-    position: relative;
-    top: -25px;
+    border: 50px solid transparent;
+    border-bottom: 25px solid;
+    border-bottom-color: red;
+    position: absolute;
 }
 
 .losange:after {
-    width: 0;
-    height: 0;
     content: '';
     position: absolute;
-    left: -20px;
-    top: 10px;
-    border: 20px solid transparent;
-    border-top: 10px solid green;
+    top: 25px;
+    left: -50px;
+    width: 0;
+    height: 0;
+    border: 50px solid transparent;
+    border-top: 25px solid red;
+}*/
+
+#gameViewZoneIso {
+    width: 100%;
 }
 
-.losange-up {
-    width: 25%;
-    padding: 1em;
-    content: '';
-    padding-bottom: 10%;
-    background: orange;
-    clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
-    transform: rotate(180deg);
+.losange {
+    height: 10%;
+    width: 10%;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 }
 
-.losangeIso {
-    width: 25%;
-    padding: 1em;
-    content: '';
-    padding-bottom: 10%;
-    background: orange;
-    clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
-    transform: rotate(180deg);
-}
-
-.losangeIso:after {
-    width: 25%;
-    padding: 1em;
-    content: '';
-    padding-bottom: 10%;
-    background: orange;
-    clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
-}
-
-.losange-down {
-    width: 25%;
-    padding: 1em;
-    content: '';
-    padding-bottom: 10%;
-    background: orange;
-    clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+.triRow {
+    display: flex;
+    height: 100px;
+    box-sizing: border-box;
 }

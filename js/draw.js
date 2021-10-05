@@ -1,4 +1,4 @@
-function drawRoom(room, player) {
+/*function drawRoom(room, player) {
     document.getElementById("gameViewZone").innerHTML = ''
     for (let y = 0; y < room.length; y++) {
         document.getElementById("gameViewZone").innerHTML += `
@@ -10,6 +10,25 @@ function drawRoom(room, player) {
             } else {
                 document.getElementById(`roomRow_${y}`).innerHTML += `
                 <div class="cell emptyCell" id="cell_${y}_${x}"></div>`
+            }
+        }
+    }
+    drawMiniMap(player)
+    drawPlayer(player)
+}*/
+
+function drawRoom(room, player) {
+    document.getElementById("gameViewZone").innerHTML = ''
+    for (let y = 0; y < room.length; y++) {
+        document.getElementById("gameViewZone").innerHTML += `
+        <div class="triRow" id="triRow_${y}"></div>`
+        for (let x = 0; x < room[y].length; x++) {
+            if (room[y][x] == 0) {
+                document.getElementById(`triRow_${y}`).innerHTML += `
+                <div class="losange wall" id="cell_${y}_${x}"></div>`
+            } else {
+                document.getElementById(`triRow_${y}`).innerHTML += `
+                <div class="losange emptyCell" id="cell_${y}_${x}"></div>`
             }
         }
     }

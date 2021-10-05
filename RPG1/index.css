@@ -1,0 +1,92 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    background-image: url("img/inkola-background.jpg");
+}
+
+.battleFieldRow {
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    line-height: 30px;
+}
+
+.battleFieldCell {
+    display: flex;
+    background-color: #8B855A;
+    width: 50px;
+    height: 50px;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 0;
+    margin: 10px;
+}
+
+#battleField {
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+}
+
+#choosePlayer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    background-color: #2E2F28;
+    z-index: 10;
+    border-radius: 40px;
+}
+
+#playerInfos {
+    background-color: #2E2F28;
+    color: white;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.cell1 {
+    background-color: brown;
+}
+
+.cell2 {
+    background-color: green;
+}
+
+#beginGame {
+    visibility: hidden;
+}
+
+#player {
+    border-radius: 50%;
+    background-color: #F39935;
+    margin: auto;
+    width: 80%;
+    height: 80%;
+}
+
+button {
+    font-size: 16px;
+    letter-spacing: 2px;
+    font-weight: 400 !important;
+    background-color: #e63946ff;
+    color: #fff;
+    padding: 23px 50px;
+    margin: auto;
+    text-align: center;
+    display: inline-block !important;
+    text-decoration: none;
+    border: 0px;
+    width: max-content;
+    cursor: pointer;
+}
