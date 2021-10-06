@@ -58,12 +58,12 @@ function pathFind(grid, startPos, finalPos, notWall) {
         if (arraysEqual(minPos, finalPos)) i = finalPath.length
         finalPath.push(minPos)
     }
-    console.log(finalPath)
+    return finalPath
 }
 
-pathFind([
-    [1, 1, 1, 1],
-    [0, 0, 0, 1],
-    [0, 1, 1, 1],
-    [0, 1, 1, 0],
-], [1, 0], [2, 3], notWall)
+// pathFind([
+//     [1, 1, 1, 1],
+//     [0, 0, 0, 1],
+//     [0, 1, 1, 1],
+//     [0, 1, 1, 0],
+// ], [1, 0], [2, 3], notWall)

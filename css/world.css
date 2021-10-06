@@ -11,6 +11,18 @@
 }
 
 #gameIsoView {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#firstRow {}
+
+.grassIso {
+    width: 10%;
+}
+
+
+/*#gameIsoView {
     transform: rotateX(60deg) rotateZ(45deg);
 }
 
@@ -38,4 +50,4 @@
     height: 85px;
 }
 
-#player {}
+#player {}*/
