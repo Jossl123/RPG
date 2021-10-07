@@ -11,14 +11,36 @@
 }
 
 #gameIsoView {
+    height: 100%;
+    width: 100%;
+    position: relative;
     display: flex;
     flex-wrap: wrap;
 }
 
-#firstRow {}
+#gameIsoClickable {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    transform: rotateX(60deg) rotateZ(45deg);
+    z-index: 20;
+}
+
+:root {
+    --img-size-x: 100px;
+    --img-size-y: 50px;
+}
+
+.row {
+    display: flex;
+    position: absolute;
+    left: calc(50% - calc(var(--img-size-x) / 2 * var(--rowNbx)));
+    top: calc(var(--img-size-y) / 2 * var(--rowNby));
+}
 
 .grassIso {
-    width: 10%;
+    width: 100px;
 }
 
 
