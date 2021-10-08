@@ -21,6 +21,7 @@ function findAdjacentCell(grid, pos, notWall) {
 }
 
 function pathFind(grid, startPos, finalPos, notWall) {
+    if (arraysEqual(startPos, finalPos)) return []
     var queue = [
         [finalPos, 0]
     ]

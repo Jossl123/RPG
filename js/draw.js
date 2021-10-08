@@ -55,6 +55,4 @@ async function drawPlayer(player) {
     }
     document.getElementById(`tileIso_${player.posOnRoom[1]}_${player.posOnRoom[0]}`).innerHTML += `
     <img src="img/dofusPersoExample.png" class="player" id="player"></img>`
-        //document.getElementById(`gameZone`).innerHTML += `
-        //<img src="img/dofusPersoExample.png" class="player" id="player"></img>`
 }
