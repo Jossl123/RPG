@@ -1,5 +1,3 @@
-var notWall = [1]
-
 function arraysEqual(a1, a2) {
     /* WARNING: arrays must not contain {objects} or behavior may be undefined */
     return JSON.stringify(a1) == JSON.stringify(a2);
@@ -27,7 +25,6 @@ function pathFind(grid, startPos, finalPos, notWall) {
         [finalPos, 0]
     ]
     var posInQueue = [finalPos]
-    console.table(grid)
     for (let i = 0; i < queue.length; i++) {
         var pos = queue[i]
         var adjacentCell = findAdjacentCell(grid, pos[0], notWall)
