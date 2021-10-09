@@ -1,8 +1,10 @@
-async function movePlayerTo(x, y) {
-    if (player.room[y][x] == 0) return
+let pathToGo = []
+
+function movePlayerTo(x, y) {
+    if (player.room[y][x] == 0 || pathToGo.length > 0) return
     var delay = 80;
     var i = 0;
-    var pathToGo = pathFind(player.room, player.posOnRoom, [x, y], [1]);
+    pathToGo = pathFind(player.room, player.posOnRoom, [x, y], [1]);
     if (pathToGo.length == 0) return
     var tmpPos = player.posOnRoom;
 
@@ -11,8 +13,10 @@ async function movePlayerTo(x, y) {
         var moveY = pathToGo[i][1] - tmpPos[1]
         tmpPos = pathToGo[i]
         movePlayer(moveX, moveY)
-        if (++i < pathToGo.length)
-            setTimeout(timeoutLoop, delay);
+        if (++i < pathToGo.length) setTimeout(timeoutLoop, delay);
+        if (i == pathToGo.length) {
+            pathToGo = []
+        }
     }
 
     setTimeout(timeoutLoop, delay);

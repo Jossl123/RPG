@@ -13,7 +13,6 @@ function drawRoom(room, player) {
     drawPlayer(player)
 }
 
-
 function drawPhTiles(room) {
     for (let i = 1; i <= room.length; i++) { //first half
         document.getElementById("gameIsoView").innerHTML += `<div style="--rowNbx: ${i}; --rowNby: ${i};" id="isoRow${i}" class="row">`
@@ -21,7 +20,9 @@ function drawPhTiles(room) {
         for (let j = 1; j <= i; j++) {
             document.getElementById(`isoRow${i}`).innerHTML += `<div class="grassIso" id="tileIso_${i-j}_${j-1}"></div>`
             if (room[i - j][j - 1] != 0) {
-                document.getElementById(`clickableRow${i}`).innerHTML += `<div onclick="movePlayerTo(${j-1}, ${i-j})" class="grassIso clickableCell" id="clickableCell_${i-j}_${j-1}"></div>`
+                document.getElementById(`clickableRow${i}`).innerHTML += `<div onclick="movePlayerTo(${j-1}, ${i-j})" class="grassIso clickableCell" id="clickableCell_${i-j}_${j-1}">
+                <div class="triUp"></div>
+                <div class="triDown"></div></div>`
             } else {
                 document.getElementById(`clickableRow${i}`).innerHTML += `<div class="grassIso" id="clickableCell_${i-j}_${j-1}"></div>`
             }
@@ -35,7 +36,9 @@ function drawPhTiles(room) {
         for (let j = room.length - i; j < room.length; j++) {
             document.getElementById(`isoRow${divIndex}`).innerHTML += `<div class="grassIso" id="tileIso_${y}_${j}"></div>`
             if (room[y][j] != 0) {
-                document.getElementById(`clickableRow${divIndex}`).innerHTML += `<div onclick="movePlayerTo(${j}, ${y})" class="grassIso clickableCell" id="clickableCell_${y}_${j}"></div>`
+                document.getElementById(`clickableRow${divIndex}`).innerHTML += `<div onclick="movePlayerTo(${j}, ${y})" class="grassIso clickableCell" id="clickableCell_${y}_${j}">
+                <div class="triUp"></div>
+                <div class="triDown"></div></div>`
             } else {
                 document.getElementById(`clickableRow${divIndex}`).innerHTML += `<div class="grassIso " id="clickableCell_${y}_${j}"></div>`
             }

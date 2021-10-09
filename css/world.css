@@ -58,8 +58,30 @@
     z-index: 20;
 }
 
-.clickableCell:hover {
-    background-color: aqua;
+.triDown {
+    opacity: 20%;
+    height: 0;
+    width: 0;
+    border: solid 50px transparent;
+    border-top: solid 25px transparent;
+    border-bottom: solid 0px;
+}
+
+.triUp {
+    opacity: 20%;
+    height: 0;
+    width: 0;
+    border: solid 50px transparent;
+    border-bottom: solid 25px transparent;
+    border-top: solid 0px;
+}
+
+.triUp:hover {
+    border-bottom: solid 25px black;
+}
+
+.triUp:hover~.triDown {
+    border-top: solid 25px black;
 }
 
 
