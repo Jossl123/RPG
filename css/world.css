@@ -41,6 +41,7 @@
 }
 
 .grassIso {
+    z-index: 2;
     position: relative;
     width: 100px;
     height: 50px;
@@ -82,6 +83,18 @@
 
 .triUp:hover~.triDown {
     border-top: solid 25px black;
+}
+
+#changeRoomButtons {
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas: ". ." ". .";
 }
 
 

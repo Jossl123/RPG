@@ -18,7 +18,7 @@ class Player {
         }
         this.worldName = world.name
         this.world = world.grid
-        this.posOnWorld = [1, 0]
+        this.posOnWorld = [1, 1]
         this.room = this.world[this.posOnWorld[1]][this.posOnWorld[0]]
         this.posOnRoom = [0, 0]
     }

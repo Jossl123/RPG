@@ -48,7 +48,19 @@ function drawPhTiles(room) {
 }
 
 function drawMiniMap(player) {
-    return
+    for (let y = 0; y < 3; y++) {
+        for (let x = 0; x < 3; x++) {
+            var cell = document.getElementById(`miniMap_${x}_${y}`)
+            var posx = player.posOnWorld[0] - 1 + x
+            var posy = player.posOnWorld[1] - 1 + y
+            if (!(0 <= posx && posx <= player.world[player.posOnWorld[1]].length - 1) || !(0 <= posy && posy <= player.world.length - 1)) cell.style.backgroundColor = "blue"
+            else {
+                var cellValue = player.world[posy][posx]
+                if (cellValue != 0) cell.style.backgroundColor = "gray"
+                else cell.style.backgroundColor = "black"
+            }
+        }
+    }
 }
 
 async function drawPlayer(player) {
