@@ -75,12 +75,12 @@ class Player {
     }
     up() {
         if (this.posOnRoom[1] == 0) { //si il est au plus en bas de la salle = change de salle
-            if (this.posOnWorld[1] != 0) { //si on est pas tout en bas du monde
+            if (this.posOnWorld[1] != 0) { //si on est pas tout en haut du monde
                 var newWorld = this.world[this.posOnWorld[1] - 1][this.posOnWorld[0]]
                 if (newWorld != 0) {
                     if (newWorld[this.world.length - 1][this.posOnRoom[0]] != 0) {
                         this.posOnWorld[1]--;
-                        this.posOnRoom[1] = this.world.length - 1
+                        this.posOnRoom[1] = this.room.length - 1
                         drawRoom(this.room, this)
                     }
                 }
