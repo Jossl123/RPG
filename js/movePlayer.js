@@ -6,7 +6,7 @@ function movePlayerTo(x, y, next = false) {
     var i = 0;
     pathToGo = pathFind(player.room, player.posOnRoom, [x, y], [1]);
     if (next && pathToGo.length == 0) {
-        movePlayer(next[0], next[y])
+        movePlayer(next[0], next[1])
     } else if (next) {
         pathToGo.push([pathToGo[pathToGo.length - 1][0] + next[0], pathToGo[pathToGo.length - 1][1] + next[1]])
     }
