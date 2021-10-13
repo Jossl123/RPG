@@ -1,4 +1,5 @@
 function drawRoom(room, player) {
+    drawPhTiles(room)
     for (let y = 0; y < room.length; y++) {
         for (let x = 0; x < room[y].length; x++) {
             if (room[y][x] != 0) {
@@ -8,12 +9,13 @@ function drawRoom(room, player) {
             }
         }
     }
-
     drawMiniMap(player)
     drawPlayer(player)
 }
 
 function drawPhTiles(room) {
+    document.getElementById("gameIsoView").innerHTML = ""
+    document.getElementById("gameIsoClickable").innerHTML = ""
     for (let i = 1; i <= room.length; i++) { //first half
         document.getElementById("gameIsoView").innerHTML += `<div style="--rowNbx: ${i}; --rowNby: ${i};" id="isoRow${i}" class="row">`
         document.getElementById("gameIsoClickable").innerHTML += `<div class="row" style="--rowNbx: ${i}; --rowNby: ${i};" id="clickableRow${i}">`

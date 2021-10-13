@@ -7,6 +7,5 @@ function play() {
     player = new Player(classChoose, firstWorld)
         // document.getElementById(`gameZone`).innerHTML += `
         //     < img src="img/dofusPersoExample.png" class="player" id="player"></img>`
-    drawPhTiles(player.room)
     drawRoom(player.room, player)
 }
