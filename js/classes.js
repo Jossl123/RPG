@@ -102,3 +102,22 @@ class World {
         this.grid = grid
     }
 }
+
+class Ennemi {
+    constructor(){
+        this.health = 100
+        this.imgLink = "./img/dofusPersoExample.png"
+    }
+    click(){
+        popupEnnemi(this)
+    }
+}
+
+class Machine{
+    constructor(){
+        this.type = "wood" // exemple
+    }
+    click(){
+        return
+    }
+}

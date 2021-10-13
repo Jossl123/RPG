@@ -2,6 +2,9 @@ var pathToGo = []
 
 function movePlayerTo(x, y, next = false) {
     if (player.room[y][x] == 0 || pathToGo.length > 0) return
+    if (typeof(player.room[y][x]) != "number") {
+        
+    }
     var delay = 80;
     var i = 0;
     pathToGo = pathFind(player.room, player.posOnRoom, [x, y], [1]);
