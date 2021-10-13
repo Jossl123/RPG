@@ -30,6 +30,7 @@ class Player {
                     if (newWorld[this.posOnRoom[1]][newWorld[this.posOnRoom[1]].length - 1] != 0) {
                         this.posOnWorld[0]--;
                         this.posOnRoom[0] = newWorld[this.posOnRoom[1]].length - 1
+                        this.room = newWorld
                         drawRoom(this.room, this)
                     }
                 }
@@ -47,6 +48,7 @@ class Player {
                     if (newWorld[this.posOnRoom[1]][0] != 0) {
                         this.posOnWorld[0]++;
                         this.posOnRoom[0] = 0
+                        this.room = newWorld
                         drawRoom(this.room, this)
                     }
                 }
@@ -64,6 +66,7 @@ class Player {
                     if (newWorld[0][this.posOnRoom[0]] != 0) {
                         this.posOnWorld[1]++;
                         this.posOnRoom[1] = 0
+                        this.room = newWorld
                         drawRoom(this.room, this)
                     }
                 }
@@ -81,6 +84,7 @@ class Player {
                     if (newWorld[this.world.length - 1][this.posOnRoom[0]] != 0) {
                         this.posOnWorld[1]--;
                         this.posOnRoom[1] = this.room.length - 1
+                        this.room = newWorld
                         drawRoom(this.room, this)
                     }
                 }
