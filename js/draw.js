@@ -20,14 +20,8 @@ function drawPhTiles(room) {
         document.getElementById("gameIsoView").innerHTML += `<div style="--rowNbx: ${i}; --rowNby: ${i};" id="isoRow${i}" class="row">`
         document.getElementById("gameIsoClickable").innerHTML += `<div class="row" style="--rowNbx: ${i}; --rowNby: ${i};" id="clickableRow${i}">`
         for (let j = 1; j <= i; j++) {
-            document.getElementById(`isoRow${i}`).innerHTML += `<div class="grassIso" id="tileIso_${i-j}_${j-1}"></div>`
-            if (room[i - j][j - 1] != 0) {
-                document.getElementById(`clickableRow${i}`).innerHTML += `<div onclick="movePlayerTo(${j-1}, ${i-j})" class="grassIso clickableCell" id="clickableCell_${i-j}_${j-1}">
-                <div class="triUp"></div>
-                <div class="triDown"></div></div>`
-            } else {
-                document.getElementById(`clickableRow${i}`).innerHTML += `<div class="grassIso" id="clickableCell_${i-j}_${j-1}"></div>`
-            }
+            drawPhTilesCell(j - 1, i - j, i, room)
+
         }
     }
     for (let i = room.length - 1; i > 0; i--) { //second half
@@ -36,16 +30,26 @@ function drawPhTiles(room) {
         document.getElementById("gameIsoView").innerHTML += `<div style="--rowNbx: ${i}; --rowNby: ${divIndex};" id="isoRow${divIndex}" class="row">`
         document.getElementById("gameIsoClickable").innerHTML += `<div class="row" style="--rowNbx: ${i}; --rowNby: ${divIndex};" id="clickableRow${divIndex}">`
         for (let j = room.length - i; j < room.length; j++) {
-            document.getElementById(`isoRow${divIndex}`).innerHTML += `<div class="grassIso" id="tileIso_${y}_${j}"></div>`
-            if (room[y][j] != 0) {
-                document.getElementById(`clickableRow${divIndex}`).innerHTML += `<div onclick="movePlayerTo(${j}, ${y})" class="grassIso clickableCell" id="clickableCell_${y}_${j}">
-                <div class="triUp"></div>
-                <div class="triDown"></div></div>`
-            } else {
-                document.getElementById(`clickableRow${divIndex}`).innerHTML += `<div class="grassIso " id="clickableCell_${y}_${j}"></div>`
-            }
+            drawPhTilesCell(j, y, divIndex, room)
             y--
         }
+    }
+}
+
+function drawPhTilesCell(x, y, index, room) {
+    document.getElementById(`isoRow${index}`).innerHTML += `<div class="grassIso" id="tileIso_${y}_${x}"></div>`
+    if (room[y][x] != 0) {
+        if (room[y][x] !== 1) {
+            document.getElementById(`clickableRow${index}`).innerHTML += `<img src='${room[y][x].imgLink}' onclick='InteractionClick(${x}, ${y})' class="grassIso clickableCell" id="clickableCell_${y}_${x}">
+            <div class="triUp"></div>
+            <div class="triDown"></div></img>`
+        } else {
+            document.getElementById(`clickableRow${index}`).innerHTML += `<div onclick="movePlayerTo(${x}, ${y})" class="grassIso clickableCell" id="clickableCell_${y}_${x}">
+            <div class="triUp"></div>
+            <div class="triDown"></div></div>`
+        }
+    } else {
+        document.getElementById(`clickableRow${index}`).innerHTML += `<div class="grassIso" id="clickableCell_${y}_${x}"></div>`
     }
 }
 
@@ -66,11 +70,15 @@ function drawMiniMap(player) {
     }
 }
 
-async function drawPlayer(player) {
+function drawPlayer(player) {
     var playerDiv = document.getElementById("player")
     if (playerDiv) {
         document.getElementById("player").parentNode.removeChild(playerDiv)
     }
     document.getElementById(`tileIso_${player.posOnRoom[1]}_${player.posOnRoom[0]}`).innerHTML += `
     <img src="img/dofusPersoExample.png" class="player" id="player"></img>`
+}
+
+function InteractionClick(x, y) {
+    player.room[y][x].click()
 }
