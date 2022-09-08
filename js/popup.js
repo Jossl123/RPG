@@ -1,5 +1,5 @@
 function popupEnnemi(ennemi) {
-    if (confirm(`vous voulez vous battez ?\n0 vie : ${ennemi.health}`)) {
+    if (confirm(`Voulez vous vous battre ?\n0 vie : ${ennemi.health}`)) {
         //lancer le combat
     }
 }

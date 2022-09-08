@@ -59,8 +59,10 @@ function drawMiniMap(player) {
             var cell = document.getElementById(`miniMap_${x}_${y}`)
             var posx = player.posOnWorld[0] - 1 + x
             var posy = player.posOnWorld[1] - 1 + y
-            if (!(0 <= posx && posx <= player.world[player.posOnWorld[1]].length - 1) || !(0 <= posy && posy <= player.world.length - 1)) cell.style.backgroundColor = "blue"
-            else if (x == 1 && y == 1) cell.style.backgroundColor = "red" //si c'est la position du joueur
+            if (!(0 <= posx && posx <= player.world[player.posOnWorld[1]].length - 1) || !(0 <= posy && posy <= player.world.length - 1)) cell.style.backgroundColor = "blue" //outside of map
+            else if (x == 1 && y == 1) {
+                cell.style.backgroundColor = "red"
+            } //si c'est la position du joueur
             else {
                 var cellValue = player.world[posy][posx]
                 if (cellValue != 0) cell.style.backgroundColor = "gray"

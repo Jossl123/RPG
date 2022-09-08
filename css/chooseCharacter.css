@@ -79,3 +79,23 @@ body,
 #playButton:active {
     background-color: #9ec53a;
 }
+
+.perso#archer {
+    background-color: #FFFD62;
+    border-color: #365733;
+}
+
+.perso#hunter {
+    background-color: #FDDCA7;
+    border-color: #2D1C02;
+}
+
+.perso#magician {
+    background-color: #4B77E5;
+    border-color: #000C3F;
+}
+
+.perso#warior {
+    background-color: #C33408;
+    border-color: #2F0F00;
+}
